@@ -1,0 +1,17 @@
+Basic Algorithms 
+
+//reverse a string 
+
+function reverseString(str){
+//seperate string into array, reverse array and join array back into string 
+str.split("").reverse().join("");
+};
+
+//factorialize
+
+function factorialize(num){
+if(num===0)
+{return 1;}// ending point of recursion
+return num * factorialize(num-1); //mulitply the number by all numbers less than it
+
+};
