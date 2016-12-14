@@ -15,3 +15,82 @@ if(num===0)
 return num * factorialize(num-1); //mulitply the number by all numbers less than it
 
 };
+
+//palindrome check 
+
+
+function palindrome(str) {
+//see if string is equal reversed with whitespace removed
+  return str.replace(/[\W_]/g, "").toLowerCase() === str.replace(/[\W_]/g, "").toLowerCase().split("").reverse().join("");
+}
+
+//find longest word in a string 
+
+function findLongestWord(str) {
+  var holder = str.split(" ");
+  // split string into an array so words can be compared 
+  var longest=""; 
+  // keep track of the longest and go through entire holder array 
+  for(var i=0; i<holder.length; i++)
+    {
+    //if holder element is larger than longest it becomes the new longest
+      if(holder[i].length>longest.length)
+        {
+          longest = holder[i];
+        }
+      
+    }
+  
+  return longest.length;
+//return length of longest 
+}
+
+
+//title case
+
+function titleCase(str) {
+  return str.toLowerCase().split(" ").map(function(word){ return word.replace(word[0],word[0].toUpperCase());}).join(" ");
+}
+//map to iterate over every array element replace them with cap version 
+titleCase("I'm a little tea pot");
+
+//largest of four
+
+function largestOfFour(arr) {
+var results=[];
+
+for(var a = 0; a < arr.length ; a++){
+//iterate through array   
+var largest = 0; 
+ /iterate through sub arrays  
+for(var b = 0 ; b < arr[a].length; b++)
+  {
+   if(arr[a][b]>largest)
+    {
+      largest = arr[a][b];
+    }
+   //find largest number 
+  }
+  results[a] = largest; 
+  //add largest numbers to array 
+}  
+  
+  return results; 
+
+}
+
+
+//confirm end of string 
+
+function confirmEnding(str, target) {
+return target===str.substr(str.length-target.length, str.length);
+}
+//if target = the substring at the end of string then return true 
+
+//repeat a string 
+function repeat(str,num){
+for(var i = 0; i < num; i++)
+{holder+=str}
+return holder 
+};
+
