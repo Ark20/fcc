@@ -110,3 +110,28 @@ function mutation(arr) {
  return true;
 }
 
+new Boolean([value]);
+
+
+
+
+function bouncer(arr) {
+  // Don't show a false ID to this bouncer.
+  function notFalsy(bar)
+  {
+  return (Boolean(bar) === true);
+  // only return values that are true / real numbers letters 
+  }
+  
+return arr.filter(notFalsy);  
+}
+
+or 
+
+function bouncer(arr){
+function falsy(arr){
+return Boolean(arr);
+}
+//return only values that evaluate to true 
+return arr.filter(falsy);
+};
