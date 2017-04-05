@@ -135,3 +135,29 @@ return Boolean(arr);
 //return only values that evaluate to true 
 return arr.filter(falsy);
 };
+
+
+
+function chunkArrayInGroups(arr, size) {
+  // Break it up.
+  var holder=[];//new array
+  var count=0; //place in array 
+  while(count<arr.length){//iterate through whole array 
+    holder.push(arr.slice(count,count+size));//push slice of array starting at begining into 
+    count=count+size; //set place in array to start slice 
+  
+  }
+  return holder;
+}
+
+chunkArrayInGroups(["a", "b", "c", "d"], 2);
+
+
+
+function slasher(arr, howMany) {
+  // it doesn't always pay to be first
+  
+  return arr.slice(howMany);//slice starting at how many you want to cut off and ending at the end of the array 
+}
+
+slasher([1, 2, 3], 2);
