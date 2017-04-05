@@ -161,3 +161,26 @@ function slasher(arr, howMany) {
 }
 
 slasher([1, 2, 3], 2);
+
+function destroyer(arr) {
+  // Remove all the values
+  var args=Array.from(arguments);//make array from arguments
+  
+  for(var i=0; i< args[0].length; i++){//iterate through array
+   for(var j=1; j<args.length;j++){//iterate through arguments
+     if(args[0][i] === args[j]){//if array element matches arguments delete 
+       delete args[0][i];
+     }
+     
+   } 
+    
+  }
+  
+  return args[0].filter(function(x){
+    return Boolean(x);//only true values are kept from array in argument 
+  });
+  
+}
+
+destroyer([1, 2, 3, 1, 2, 3], 2, 3);
+
