@@ -184,3 +184,19 @@ function destroyer(arr) {
 
 destroyer([1, 2, 3, 1, 2, 3], 2, 3);
 
+
+
+function getIndexToIns(arr, num) {
+//insert number into array
+  arr.push(num);
+  //sort array in ascending order
+  arr = arr.sort(function(a,b){
+    return a-b;
+  });
+  //find position of num
+  return arr.indexOf(num);
+
+  
+}
+
+getIndexToIns([40, 60], 50);
