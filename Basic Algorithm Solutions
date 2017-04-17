@@ -200,3 +200,24 @@ function getIndexToIns(arr, num) {
 }
 
 getIndexToIns([40, 60], 50);
+
+function rot13(str) { // LBH QVQ VG!
+  str=str.split("").map(cipher).join("");//split string, manipulate elements, join
+  return str;
+}
+
+function cipher(letter){
+  var symbolregx = /[^a-zA-Z]/g; //everything that isnt alphabetic
+  if(symbolregx.test(letter)){//is letter alphabetic 
+  return letter;   
+  }
+  
+  var code = letter.charCodeAt(0);
+  if(code>77){
+    code-= 13;
+  }
+  else{
+    code += 13;
+  }
+ return String.fromCharCode(code);
+}
